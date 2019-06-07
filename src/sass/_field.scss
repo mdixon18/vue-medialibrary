@@ -42,8 +42,10 @@
         &__helper {
             position: absolute;
             float: right;
-            bottom: 0;
+            top: 50%;
             right: 1rem;
+            
+            transform: translateY(-50%);
 
             font-size: 0.875rem;
             color: $gray-600;

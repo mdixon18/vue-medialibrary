@@ -103,8 +103,6 @@
 
             if (this.content) {
                 this.loading = true;
-
-                // set here
             }
         },
 
