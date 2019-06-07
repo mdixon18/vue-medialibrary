@@ -16,7 +16,7 @@
                 <div class="media-library-field__selected__inner">
                     <div class="media-library-field__selected__inner__img" v-if="file.collection_name == 'images'" @click="showManager = true">
                         <div class="media-library-field__selected__inner__img__frame">
-                            <div class="media-library-field__selected__inner__img__frame__image" :style="`background-image: url('${file.fullUrl}');`"></div>
+                            <div class="media-library-field__selected__inner__img__frame__image" :style="`background-image: url('${file.dataUrl}');`"></div>
                         </div>
 
                         <div class="media-library-field__selected__inner__img__edit">

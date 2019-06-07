@@ -77,7 +77,7 @@
                                             :class="{'grid-item--active': store.images.selected.indexOf(m.id) > -1}"
                                             @click="selectManual('images', m.id)"
                                         >
-                                            <div class="grid-item__inner" :style="`background: url('${m.fullUrl}'); background-repeat: no-repeat; background-size: cover;`"></div>
+                                            <div class="grid-item__inner" :style="`background: url('${m.dataUrl}'); background-repeat: no-repeat; background-size: cover;`"></div>
                                         </div>
                                     </div>
                                     <div class="media-library__manager__content__images__grid__files" v-else-if="type == 'files'">
@@ -111,7 +111,7 @@
                         <div v-else>
                             <div class="media-library__manager__content__info__section">
                                 <div class="media-library__manager__content__info__image">
-                                    <img v-if="type == 'images'" :src="openFile.fullUrl" style="width: auto; height: auto; max-width: 150px; max-height: 150px;">
+                                    <img v-if="type == 'images'" :src="openFile.dataUrl" style="width: auto; height: auto; max-width: 150px; max-height: 150px;">
                                 </div>
                                 <span class="media-library__manager__content__info__text" v-html="openFile.file_name" style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden;" />
                                 <span class="media-library__manager__content__info__text media-library__manager__content__info__text--secondary" v-if="type == 'images'">Dimensions: {{ openFile.image.width }} × {{ openFile.image.height }}</span>
