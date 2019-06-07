@@ -1,0 +1,211 @@
+.media-library-field {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    * {
+        box-sizing: border-box;
+    }
+
+    &__selected, &__selector, &__loader {
+        display: block;
+        position: relative;
+
+        padding: 0.75rem;
+        width: 100%;
+        min-height: 1rem;
+        
+        background: transparent;
+        border: 1px solid $gray-500;
+        
+        text-align: left;
+
+        &__button {
+            padding: 0.25rem 1rem;
+
+            border: 1px solid $gray-600;
+            border-radius: 0.875rem;
+
+            font-size: 0.875rem;
+            line-height: 1;
+            color: $gray-600;
+
+            appearance: none;
+            cursor: pointer;
+
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                border-color: $gray-800;
+                color: $gray-800;
+            }
+        }
+
+        &__helper {
+            position: absolute;
+            float: right;
+            bottom: 0;
+            right: 1rem;
+
+            font-size: 0.875rem;
+            color: $gray-600;
+        }
+    }
+    
+    &__loader {
+        text-align: center;
+    }
+
+    &__selected {
+        padding: 1rem;
+
+        &__inner {
+            display: flex;
+
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            align-content: flex-start;
+
+            &__details {
+                flex-grow: 1;
+                padding: 0 1rem;
+
+                &__helper {
+                    display: block;
+                    margin: 2rem 0 0 0;
+
+                    font-size: 0.875rem;
+                    color: $gray-600;
+                }
+
+                &__button {
+                    display: block;
+
+                    width: 100%;
+                    padding: 0.5rem 0.75rem;
+
+                    background: transparent;
+                    border: 1px solid $gray-500;
+                    border-radius: 9999px;
+
+                    font-size: .75rem;
+                    color: $gray-600;
+                    text-align: center;
+                    text-decoration: none;
+                    cursor: pointer;
+
+                    transition: all 0.2s ease-in-out;
+
+                    &:hover {
+                        border-color: $blue-500;
+                        background: $blue-500;
+                        color: white;
+                    }
+
+                    &--delete {
+                        border-color: $red-500;
+                        color: $red-500;
+
+                        &:hover {
+                            border-color: $red-500;
+                            background: $red-500;
+                            color: white;
+                        }
+                    }
+                }
+
+                &__name, &__dimensions, &__edit {
+                    display: block;
+                }
+
+                &__name {
+                    margin-bottom: 0.5rem;
+
+                    font-size: 1rem;
+                    font-weight: 400;
+                    color: $gray-800;
+                }
+
+                &__dimensions, &__edit {
+                    font-size: .875rem;
+                    font-weight: 300;
+                    color: $gray-600;
+                }
+
+                &__edit {
+                    margin-top: 0.5rem;
+
+                    color: $blue-500;
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            &__img {
+                position: relative;
+
+                width: 33.33%;
+                max-width: 15rem;
+                min-width: 6.25rem;
+
+                &__edit {
+                    display: none;
+
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+
+                    background: rgba(255,255,255,0.4);
+                    
+                    cursor: pointer;
+
+                    > * {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+
+                        transform: translate(-50%, -50%);
+
+                        font-size: 1.25rem;
+                        font-weight: bold;
+                        color: $gray-800;
+                        text-transform: uppercase;
+                    }
+                }
+
+                &:hover {
+                    .media-library-field__selected__inner__img__edit {
+                        display: block;
+                    }
+                }
+
+                &__frame {
+                    position: relative;
+
+                    width: 100%;
+                    padding-bottom: 100%;
+
+                    overflow: hidden;
+
+                    &__image {
+                        display: flex;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+
+                        background-color: $gray-100;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                    }
+                }
+            }
+        }
+    }
+}
