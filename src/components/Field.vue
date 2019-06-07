@@ -125,6 +125,14 @@
             change() {
                 this.$emit('input', this.content);
             }
-        }
+        },
+
+        watch: {
+            value() {
+                if (typeof this.file.id == 'undefined') {
+                    this.loading = true;
+                }
+            }
+        },
     }
 </script>
