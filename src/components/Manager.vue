@@ -334,6 +334,7 @@
             getFile() {
                 return axios.get(this.url(`/media-library-api/file?name=${this.selected}`))
                     .catch(error => {
+                        this.loading.wrapper = false;
                         this.$emit('fail-to-find', true);
                     })
                     .then(({ data }) => {

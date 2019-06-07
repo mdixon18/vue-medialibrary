@@ -1,6 +1,6 @@
 {
   "name": "vue-medialibrary",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "A Vue component for the mdixon18/media-library",
   "main": "src/index.js",
   "scripts": {
