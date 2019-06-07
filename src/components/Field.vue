@@ -92,7 +92,7 @@
         },
 
         data: () => ({
-            loading: false,
+            loading: true,
             showManager: false,
             file: {},
             content: null,
@@ -101,8 +101,8 @@
         mounted() {
             this.content = this.value ? this.value : this.content;
 
-            if (this.content) {
-                this.loading = true;
+            if (this.content == null) {
+                this.loading = false;
             }
         },
 
