@@ -27,7 +27,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.18",
     "@fortawesome/free-solid-svg-icons": "^5.8.2",
     "@fortawesome/vue-fontawesome": "^0.1.6",
-    "axios": "^0.18",
+    "axios": "^0.21",
     "vue-infinite-loading": "^2.4.4",
     "vue-toasted": "^1.1.27"
   },
